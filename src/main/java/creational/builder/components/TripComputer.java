@@ -1,0 +1,33 @@
+package creational.builder.components;
+
+import creational.builder.cars.Car;
+
+/**
+ * Title: <br>
+ * Description: 产品特征 4
+ * Just another feature of a car.<br>
+ * Company: wondersgroup.com <br>
+ *
+ * @author 王李懋
+ * @version 1.0
+ */
+public class TripComputer {
+
+    private Car car;
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public void showFuelLevel() {
+        System.out.println("Fuel level: " + car.getFuel());
+    }
+
+    public void showStatus() {
+        if (this.car.getEngine().isStarted()) {
+            System.out.println("Car is started");
+        } else {
+            System.out.println("Car isn't started");
+        }
+    }
+}
